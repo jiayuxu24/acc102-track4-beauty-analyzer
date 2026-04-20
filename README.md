@@ -1,19 +1,33 @@
 # Beauty Ingredients & User Preference Analyzer
-## ACC102 Track4 - FMCG Beauty Analysis
+ACC102 Track 4 - FMCG Beauty Analysis
 
-This project analyzes popular beauty ingredients, user ratings, and price preferences using real Sephora dataset.
+## 🔗 1. Product Link
+[View the Streamlit App](https://acc102-track4-beauty-analyzer-nmhksnct4zvu9gmchqc9hw.streamlit.app/)
 
-## Data Source
-- Sephora Website Dataset (Kaggle, accessed Apr 2026)
-- Open Beauty Facts (public cosmetic database)
+## 1. Problem & User
+This project analyzes popular beauty ingredients, user ratings, and price preferences in the Sephora product catalog.
+It aims to identify ingredient trends, price-rating correlations, and category-specific preferences to help users understand market patterns in beauty products.
 
-## Features
-- Interactive ingredient popularity analysis
-- Price vs rating correlation visualization
-- Category and price range filters
-- Word cloud for common ingredients
+## 2. Data
+- **Source**: Sephora Website Dataset (Kaggle, accessed Apr 2026)
+- **Format**: Simulated data based on real Sephora dataset distribution
+- **Key Fields**: category, price, rating, ingredients
 
-## How to Run
+## 3. Methods (main Python steps)
+1. **Data Generation**: Created realistic simulated data based on Sephora's typical ingredient frequencies, price ranges, and rating distributions.
+2. **Filtering**: Implemented category, price range, and minimum rating filters to narrow down the dataset.
+3. **Analysis**:
+    - Ingredient popularity count and bar chart visualization
+    - Price vs rating correlation scatter plot
+    - Ingredients word cloud
+4. **Insights**: Summarized trends in ingredient popularity, price-rating relationships, and category preferences.
+
+## 4. Key Findings
+- **Ingredient Trends**: Hyaluronic Acid and Niacinamide are the most common and popular ingredients across skincare products.
+- **Price vs Rating**: Mid-range products ($10–$60) tend to have more consistent high ratings, while premium-priced products show greater rating variability.
+- **Category Differences**: Skincare products feature the widest variety of ingredients, while fragrances have the most simplified ingredient lists.
+
+## 5. How to Run
 1. Install dependencies:
 ```bash
 pip install -r requirements.txt
