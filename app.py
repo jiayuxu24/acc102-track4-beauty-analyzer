@@ -13,14 +13,13 @@ st.title("Beauty Ingredients & User Preference Analyzer")
 st.caption("Data Source: Sephora Dataset (Kaggle) + Open Beauty Facts")
 
 # --------------------------
-# 数据加载（真实数据源）
+# 数据加载（修复版，适配真实列名）
 # --------------------------
 @st.cache_data
 def load_data():
     df = pd.read_csv("sephora_products.csv")
     # 基础清洗
     df = df.dropna(subset=["ingredients", "price", "rating"])
-    df = df.drop_duplicates(subset=["product_name"])
     df["price"] = pd.to_numeric(df["price"], errors="coerce")
     df["rating"] = pd.to_numeric(df["rating"], errors="coerce")
     return df
@@ -32,20 +31,34 @@ st.success("✅ 真实数据加载完成（Sephora 官网公开数据）")
 # 侧边栏筛选
 # --------------------------
 st.sidebar.header("Filter Panel")
-category = st.sidebar.selectbox("Category", df["category"].unique())
-price_range = st.sidebar.slider("Price Range", 
-                                int(df["price"].min()), 
-                                int(df["price"].max()), 
-                                (10, 200))
+# 先检查数据里的列名，用存在的列来筛选
+if "category" in df.columns:
+    category = st.sidebar.selectbox("Category", df["category"].unique())
+else:
+    category = None
+
+price_range = st.sidebar.slider(
+    "Price Range", 
+    int(df["price"].min()), 
+    int(df["price"].max()), 
+    (10, 200)
+)
 rating_filter = st.sidebar.slider("Min Rating", 0.0, 5.0, 3.5)
 
 # 筛选数据
-df_filter = df[
-    (df["category"] == category) &
-    (df["price"] >= price_range[0]) &
-    (df["price"] <= price_range[1]) &
-    (df["rating"] >= rating_filter)
-]
+if category and "category" in df.columns:
+    df_filter = df[
+        (df["category"] == category) &
+        (df["price"] >= price_range[0]) &
+        (df["price"] <= price_range[1]) &
+        (df["rating"] >= rating_filter)
+    ]
+else:
+    df_filter = df[
+        (df["price"] >= price_range[0]) &
+        (df["price"] <= price_range[1]) &
+        (df["rating"] >= rating_filter)
+    ]
 
 # --------------------------
 # 1. 热销成分统计
