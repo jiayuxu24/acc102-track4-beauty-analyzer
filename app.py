@@ -1,4 +1,4 @@
-# Streamlit Beauty Analyzer (Demo Version)
+# Streamlit Beauty Analyzer (Stable Demo Version)
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -10,21 +10,35 @@ st.title("Beauty Ingredients & User Preference Analyzer")
 st.caption("Demo Version: Using simulated Sephora data for demonstration")
 
 # --------------------------
-# 1. 生成模拟数据（不用上传CSV文件！）
+# 1. 生成长度一致的模拟数据
 # --------------------------
 @st.cache_data
 def generate_demo_data():
-    # 常见美妆成分
-    ingredients = [
-        "Hyaluronic Acid", "Niacinamide", "Ceramide", "Vitamin C", "Retinol",
-        "Salicylic Acid", "Glycolic Acid", "Aloe Vera", "Shea Butter", "Tea Tree Oil"
+    # 统一生成100条数据
+    n = 100
+    categories = ["Skincare", "Makeup", "Haircare", "Fragrance"] * (n // 4 + 1)
+    categories = categories[:n]
+    
+    prices = [10, 25, 40, 60, 80, 100] * (n // 6 + 1)
+    prices = prices[:n]
+    
+    ratings = [3.5, 4.0, 4.2, 4.5, 4.7, 5.0] * (n // 6 + 1)
+    ratings = ratings[:n]
+    
+    ingredients_list = [
+        "Hyaluronic Acid, Niacinamide, Vitamin C",
+        "Retinol, Salicylic Acid, Glycolic Acid",
+        "Ceramide, Aloe Vera, Shea Butter",
+        "Tea Tree Oil, Vitamin E, Peptides"
     ]
-    # 生成100条模拟数据
+    ingredients = ingredients_list * (n // 4 + 1)
+    ingredients = ingredients[:n]
+    
     data = {
-        "category": ["Skincare", "Makeup", "Haircare", "Fragrance"] * 25,
-        "price": [10, 25, 40, 60, 80, 100] * 17 + [50],
-        "rating": [3.5, 4.0, 4.2, 4.5, 4.7, 5.0] * 16 + [4.3, 4.6, 4.8, 4.9],
-        "ingredients": [", ".join(ingredients[:i%10+3]) for i in range(100)]
+        "category": categories,
+        "price": prices,
+        "rating": ratings,
+        "ingredients": ingredients
     }
     return pd.DataFrame(data)
 
@@ -85,7 +99,7 @@ st.pyplot(fig_wc)
 # --------------------------
 st.subheader("4. Key Insights")
 st.markdown("""
-- **高人气成分**：玻尿酸、烟酰胺、神经酰胺是最常见的热门成分
+- **高人气成分**：玻尿酸、烟酰胺、维生素C是最常见的热门成分
 - **价格与评分**：中低价（$10-$60）产品普遍评分更稳定，高单价产品不一定代表更好口碑
 - **成分趋势**：保湿和修复类成分在护肤产品中占比最高
 """)
