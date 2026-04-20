@@ -30,7 +30,7 @@ streamlit run app.py
 # 6. Product Link / Demo
 
 View the Streamlit App:  
-[Insert your app link here, e.g., https://your-app.streamlit.app]
+(https://acc102-track4-beauty-analyzer-nmhksnct4zvu9gmchqc9hw.streamlit.app)
 
 # 7. Limitations & Next Steps
 
