@@ -31,3 +31,8 @@ It aims to identify ingredient trends, price-rating correlations, and category-s
 1. Install dependencies:
 ```bash
 pip install -r requirements.txt
+2. Run the Streamlit application:
+streamlit run app.py
+## 6. Limitations & Next Steps
+This version uses simulated data for stable deployment; future versions can integrate the full real dataset.
+Additional features could include ingredient recommendation, sentiment analysis, and product matching.
