@@ -27,11 +27,10 @@ It aims to identify ingredient trends, price-rating correlations, and category-s
 - **Price vs Rating**: Mid-range products ($10–$60) tend to have more consistent high ratings, while premium-priced products show greater rating variability.
 - **Category Differences**: Skincare products feature the widest variety of ingredients, while fragrances have the most simplified ingredient lists.
 
-## 5. **How to Run**
-1. **Install dependencies**:
-```bash
+## 5. How to Run
+1. Install dependencies:
 pip install -r requirements.txt
-2.Run the Streamlit application:
+2. Run the Streamlit application:
 ```bash
 streamlit run app.py
 ## 6. **Limitations & Next Steps**
