@@ -33,10 +33,5 @@ pip install -r requirements.txt
 streamlit run app.py
 
 ## 6. **Limitations & Next Steps**
-```bash
-# This version uses simulated data for stable deployment
-pip install -r requirements.txt
-streamlit run app.py
-## Additional Features Coming Soon
-- Sentiment analysis for user reviews
-- Ingredient recommendation system matching real datasets
+- This demo uses simulated data for stable deployment.
+- Future work: integrate full dataset and add more features.
