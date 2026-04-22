@@ -31,8 +31,9 @@ streamlit run app.py
 
 View the Streamlit App:  
 (https://acc102-track4-beauty-analyzer-nmhksnct4zvu9gmchqc9hw.streamlit.app)
-View the Demo: 
-https://www.bilibili.com/video/BV12XoWBWE6y/
+
+Demo Video: (https://www.bilibili.com/video/BV12XoWBWE6y/)
+
 
 # 7. Limitations & Next Steps
 
