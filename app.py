@@ -116,9 +116,9 @@ st.pyplot(fig_wc)
 # --------------------------
 st.subheader("4. Key Insights (Based on Real Sephora Trends)")
 st.markdown("""
-- **成分趋势**：玻尿酸（Hyaluronic Acid）和烟酰胺（Niacinamide）是Sephora最常见的两大热门成分，广泛出现在各类护肤产品中。
-- **价格与口碑**：$10-$60的中低价产品评分更稳定，而高价香水/彩妆的评分波动更大，并非越贵口碑越好。
-- **品类偏好**：护肤类产品成分最丰富，普遍添加多种功效性成分，而香水产品的成分相对单一。
+- **Ingredient Trend**: Hyaluronic Acid and Niacinamide are the two most common ingredients at Sephora, widely found across skincare products.
+- **Price vs. Rating**: Mid-range products ($10-$60) have more stable ratings, while expensive perfumes and makeup show greater variation — higher price does not guarantee better quality.
+- **Category Preference**: Skincare products have the most diverse ingredients with multiple active components, while perfumes have relatively simpler ingredient lists.
 """)
 
 st.balloons()
