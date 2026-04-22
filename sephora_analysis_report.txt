@@ -1,0 +1,50 @@
+===== SEPHORA 美妆数据分析报告 =====
+有效商品总数：9168
+
+【TOP10 品牌】
+brand
+SEPHORA COLLECTION    496
+CLINIQUE              234
+TARTE                 170
+TOM FORD              161
+DIOR                  145
+FRESH                 138
+KIEHL'S SINCE 1851    126
+LANCÔME               120
+BUMBLE AND BUMBLE     104
+MAKE UP FOR EVER       99
+
+【价格分布】
+price_range
+0-30       3967
+30-60      3084
+60-100     1272
+100-200     668
+200-500     176
+
+【高分品牌】
+                    mean  count
+brand                          
+AETHER BEAUTY       5.00      6
+YUNI                5.00      1
+MONTBLANC           5.00      3
+FOUR SIGMATIC       5.00      2
+GOLDE               4.83      3
+RODIN OLIO LUSSO    4.80      5
+STACKEDSKINCARE     4.69      8
+BETTER NOT YOUNGER  4.69      8
+DAE                 4.67      3
+LAB SERIES FOR MEN  4.67      3
+
+【热门单品】
+                  brand                                                           name  price  rating  number_of_reviews
+           BAREMINERALS Original Loose Powder Mineral Foundation Broad Spectrum SPF 15   32.0     4.5              19000
+                   NARS                                                          Blush   30.0     4.5              17000
+       KVD VEGAN BEAUTY                                                Tattoo Eyeliner   21.0     4.0              17000
+              TOO FACED                                        Better Than Sex Mascara   25.0     3.5              15000
+FENTY BEAUTY BY RIHANNA                      Pro Filt'r Soft Matte Longwear Foundation   35.0     4.0              15000
+      BENEFIT COSMETICS                 They’re Real! Lengthening & Volumizing Mascara   25.0     4.0              15000
+            URBAN DECAY                                       24/7 Glide-On Eye Pencil   22.0     4.5              15000
+ANASTASIA BEVERLY HILLS                                                       Brow Wiz   23.0     4.5              14000
+       KVD VEGAN BEAUTY                                    Everlasting Liquid Lipstick   21.0     4.5              14000
+       KVD VEGAN BEAUTY                                             Lock-It Foundation   37.0     4.0              14000
